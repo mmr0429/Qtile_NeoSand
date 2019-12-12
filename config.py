@@ -118,18 +118,17 @@ screens = [
     Screen(
         top=bar.Bar(
             [
-                widget.GroupBox(highlight_method='block', this_current_screen_border='ed6a69',rounded=False),
+                widget.GroupBox(highlight_method='block', inactive='696969', this_current_screen_border='ed6a69',other_screen_border='3a3663',rounded=False),
                 widget.Prompt(),
                 widget.WindowName(),
                 #widget.TextBox("default config", name="default"),
-                widget.Sep(),
                 widget.CurrentLayout(),
                 widget.Sep(),
                 widget.Battery(format='{percent:2.0%}'),
                 widget.Sep(),
                 widget.Systray(),
                 widget.Sep(),
-                widget.Clock(format='%Y-%m-%d %I:%M %p'),
+                widget.Clock(format='%Y-%m-%d %H:%M %p'),
             ],
             24,background='#1d1b31',
         ),
