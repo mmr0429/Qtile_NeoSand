@@ -32,7 +32,7 @@ from typing import List  # noqa: F401
 
 import os
 import subprocess
-
+import iwlib
 
 @hook.subscribe.startup_once
 def autostart():
@@ -118,12 +118,14 @@ screens = [
     Screen(
         top=bar.Bar(
             [
-                widget.GroupBox(highlight_method='block', inactive='696969', this_current_screen_border='ed6a69',other_screen_border='3a3663',rounded=False),
+                widget.GroupBox(highlight_method='block', inactive='939393', this_current_screen_border='5B5385',other_screen_border='302d52',rounded=False),
                 widget.Prompt(),
                 widget.WindowName(),
                 #widget.TextBox("default config", name="default"),
-                widget.CurrentLayout(),
-                widget.Sep(),
+                #widget.Wlan(interface='wlp3s0'),
+                #widget.Sep(),
+                #widget.CurrentLayout(),
+                #widget.Sep(),
                 widget.Battery(format='{percent:2.0%}'),
                 widget.Sep(),
                 widget.Systray(),
